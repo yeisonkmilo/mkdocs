@@ -3,4 +3,4 @@
 ## Entra y descarga el link 
 [https://darwinyusef.github.io/mkdocsthemplate/site](https://darwinyusef.github.io/mkdocsthemplate/site/tal-4/)
 
-![Pantallazo del template](assets/images/themephantallazoRequeriment.png)
+![Pantallazo del template](./docs/assets/images/themephantallazoRequeriment.png)
