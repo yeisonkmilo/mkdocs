@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+actor "Usuario" as u
+
+package "Sitio Web" {
+  usecase "Ver Página de Inicio" as UC1
+  usecase "Ver Página de Acerca de" as UC2
+  usecase "Ver Página de Servicios" as UC3
+  usecase "Ver Página de Contacto" as UC4
+}
+
+u --> UC1 : "Acceder a Inicio"
+u --> UC2 : "Acceder a Acerca de"
+u --> UC3 : "Acceder a Servicios"
+u --> UC4 : "Acceder a Contacto"
+
+note right of u
+El menú principal es visible en todas las páginas.
+end note
+
+@enduml

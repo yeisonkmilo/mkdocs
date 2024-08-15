@@ -1,0 +1,20 @@
+@startuml
+start
+
+:Usuario accede a la página de listado de productos;
+
+:Desplegar menú de criterios de ordenación;
+
+repeat
+  :Usuario selecciona un criterio de ordenación;
+  if (Criterio de ordenación válido?) then (sí)
+    :Aplicar ordenación basada en el criterio seleccionado;
+    :Mostrar productos ordenados;
+    break
+  else (no)
+    :Mostrar mensaje de error "Criterio no válido";
+  endif
+repeat while (El usuario quiere seleccionar otro criterio?) is (sí) not (no)
+
+stop
+@enduml

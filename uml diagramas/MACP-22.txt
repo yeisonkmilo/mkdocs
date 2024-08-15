@@ -1,0 +1,25 @@
+@startuml
+start
+
+:Usuario abre la página de producto;
+:Usuario selecciona la imagen del producto;
+
+repeat
+  :Usuario hace clic en la imagen para hacer zoom;
+  if (¿Imagen es visible en el área de zoom?) then (sí)
+    :Mostrar imagen con zoom;
+    :Usuario explora la imagen con zoom;
+    if (¿Usuario termina de ver la imagen?) then (sí)
+      :Cerrar vista con zoom;
+    else (no)
+      :Usuario continúa explorando;
+    endif
+  else (no)
+    :Mostrar mensaje de error "No se puede hacer zoom";
+  endif
+repeat while (¿Usuario sigue interactuando con la imagen?) is (sí) not (no)
+
+:Usuario regresa a la vista estándar;
+stop
+
+@enduml

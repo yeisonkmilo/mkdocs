@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor "Usuario" as u
+
+package "Sistema de Notificaciones" {
+  usecase "Recibir Notificación por Correo" as UC1
+  usecase "Monitorear Disponibilidad del Producto" as UC2
+  usecase "Enviar Notificación de Stock" as UC3
+}
+
+u --> UC1
+u --> UC2
+UC2 --> UC3
+
+@enduml

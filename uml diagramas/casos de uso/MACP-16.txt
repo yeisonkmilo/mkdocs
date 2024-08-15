@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+actor Usuario as u
+
+package "Sistema de Soporte" {
+  usecase "Acceder al Centro de Ayuda" as UC1
+  usecase "Contactar al Equipo de Soporte" as UC2
+  usecase "Ver Preguntas Frecuentes" as UC3
+  usecase "Enviar un Ticket" as UC4
+  usecase "Chatear con Soporte en Vivo" as UC5
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC4
+u --> UC5
+
+@enduml

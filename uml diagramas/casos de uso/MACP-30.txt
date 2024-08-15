@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor Invitado as g
+actor "Sistema de Correo Electrónico" as es
+
+package "Registro de Usuario" {
+  usecase "Registrar Cuenta" as UC1
+  usecase "Verificar Correo Electrónico" as UC2
+}
+
+g --> UC1
+es --> UC2
+UC1 --> UC2 : activa
+
+@enduml

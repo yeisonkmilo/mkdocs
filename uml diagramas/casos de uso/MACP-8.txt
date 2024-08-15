@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor Usuario as U
+
+package "Página de Inicio" {
+  usecase "Ver productos destacados" as UC1
+  usecase "Descubrir nuevos productos" as UC2
+  usecase "Explorar ofertas actuales" as UC3
+}
+
+U --> UC1
+U --> UC2
+U --> UC3
+
+@enduml

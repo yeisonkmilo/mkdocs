@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+actor Usuario as u
+
+package "Menú del Sitio Web" {
+  usecase "Ver Menú" as UC1
+  usecase "Navegar por Secciones" as UC2
+  usecase "Buscar" as UC3
+  usecase "Acceder a Perfil" as UC4
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC4
+
+@enduml

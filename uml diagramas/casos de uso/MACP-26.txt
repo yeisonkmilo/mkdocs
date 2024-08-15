@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+actor "Usuario" as u
+
+package "Páginas de Detalles de Productos" {
+  usecase "Ver detalles del producto" as UC1
+  usecase "Ver fotos del producto" as UC2
+  usecase "Leer descripción del producto" as UC3
+  usecase "Comparar productos" as UC4
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC4
+
+@enduml

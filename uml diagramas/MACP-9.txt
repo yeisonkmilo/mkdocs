@@ -1,0 +1,14 @@
+@startuml
+start
+:Usuario entra al sitio web;
+:Usuario busca enlaces a redes sociales;
+if (¿Enlaces visibles en el sitio?) then (sí)
+  :Mostrar enlaces a redes sociales;
+  :Usuario puede seguir en redes sociales;
+else (no)
+  :Mostrar mensaje "Enlaces no encontrados";
+  :Ofrecer opciones de contacto;
+endif
+:Usuario sigue al sitio web en redes sociales;
+stop
+@enduml

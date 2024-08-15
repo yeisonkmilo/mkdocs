@@ -1,0 +1,17 @@
+@startuml
+start
+
+:Usuario se interesa en un producto;
+:Usuario se suscribe para notificaciones de stock;
+
+repeat
+  :Sistema revisa el stock del producto;
+  if (Producto agotado?) then (sí)
+    :Esperar un tiempo antes de revisar de nuevo;
+  else (no)
+    :Enviar notificación por correo electrónico al usuario;
+    stop
+  endif
+repeat while (Producto no está en stock?)
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+
+actor "Usuario Registrado" as ur
+actor "Visitante" as v
+
+package "Sitio Web" {
+  usecase "Ver Productos" as UC1
+  usecase "Comprar Productos" as UC2
+  usecase "Dejar Opinión" as UC3
+  usecase "Valorar Productos" as UC4
+  usecase "Leer Opiniones" as UC5
+}
+
+v --> UC1
+v --> UC2
+ur --> UC1
+ur --> UC2
+ur --> UC3
+ur --> UC4
+ur --> UC5
+
+@enduml

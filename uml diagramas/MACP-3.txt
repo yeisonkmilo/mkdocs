@@ -1,0 +1,25 @@
+@startuml
+start
+:Mostrar Menú Principal;
+
+repeat
+  :Seleccionar opción del menú principal;
+  if (¿Opción tiene submenú?) then (sí)
+    :Mostrar submenú;
+    repeat
+      :Seleccionar opción del submenú;
+      if (¿Opción del submenú es válida?) then (sí)
+        :Ir a la sección correspondiente;
+        break
+      else (no)
+        :Mostrar mensaje de error "Opción no válida";
+      endif
+    repeat while (Desea seleccionar otra opción en el submenú?) is (sí) not (no)
+  else (no)
+    :Ir a la sección correspondiente;
+  endif
+repeat while (Desea seleccionar otra opción en el menú principal?) is (sí) not (no)
+
+:Mostrar mensaje de despedida;
+stop
+@enduml

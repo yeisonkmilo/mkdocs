@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor User as u
+
+package "Interfaz de Usuario" {
+  usecase "Personalizar tamaño del texto" as UC1
+  usecase "Cambiar color de fondo" as UC2
+  usecase "Reorganizar elementos" as UC3
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+@enduml

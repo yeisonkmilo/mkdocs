@@ -1,0 +1,15 @@
+@startuml
+start
+:Iniciar sesión en el sitio web;
+:Buscar el producto adquirido;
+:Seleccionar el producto;
+if (¿Producto ya valorado?) then (no)
+  :Escribir opinión y asignar valoración;
+  :Enviar opinión y valoración;
+  :Confirmar envío;
+else (sí)
+  :Mostrar mensaje "Ya has valorado este producto";
+endif
+:Actualizar página de producto con nueva valoración;
+stop
+@enduml

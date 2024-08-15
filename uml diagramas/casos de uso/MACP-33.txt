@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor "Usuario Registrado" as user
+
+package "Sistema de Perfil de Usuario" {
+  usecase "Editar Datos del Perfil" as UC1
+  usecase "Ver Perfil" as UC2
+  usecase "Actualizar Información" as UC3
+}
+
+user --> UC1
+user --> UC2
+UC1 --> UC3 : Actualiza
+
+@enduml

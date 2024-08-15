@@ -1,0 +1,26 @@
+@startuml
+start
+
+:Iniciar cierre de sesión;
+
+repeat
+  :Verificar si hay sesiones activas que cerrar;
+  if (¿Hay sesiones activas?) then (sí)
+    :Cerrar sesión activa;
+    if (¿Error al cerrar sesión?) then (sí)
+      :Mostrar alerta de error;
+      ->NOK;
+    else (no)
+      #palegreen:Éxito al cerrar sesión;
+      ->OK;
+    endif
+  else (no)
+    #palegreen:No hay sesiones activas;
+    ->OK;
+  endif
+repeat while (¿Error al cerrar sesión?) is (sí)
+
+:Mostrar notificación de éxito;
+stop
+
+@enduml

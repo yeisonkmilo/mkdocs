@@ -1,0 +1,22 @@
+@startuml
+start
+:Acceder a la página de inicio del sitio web;
+:Verificar la necesidad de un slider de imágenes;
+if (¿Necesita un slider de imágenes?) then (sí)
+  :Diseñar el slider;
+  :Seleccionar imágenes promocionales;
+  :Configurar el slider con las imágenes seleccionadas;
+  :Implementar el slider en la página de inicio;
+  :Realizar pruebas del slider en la página de inicio;
+  if (¿El slider funciona correctamente?) then (sí)
+    :Publicar cambios en el sitio web;
+  else (no)
+    :Corregir errores del slider;
+    :Volver a probar el slider;
+  endif
+else (no)
+  :No se requiere slider;
+endif
+:Monitorear el desempeño del slider;
+stop
+@enduml

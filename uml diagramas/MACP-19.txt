@@ -1,0 +1,19 @@
+@startuml
+start
+
+:El usuario llega a una página;
+:Mostrar los breadcrumbs que indican la ubicación actual;
+:El usuario interactúa con los breadcrumbs;
+
+repeat
+  :El usuario hace clic en un enlace de breadcrumb;
+  if (¿Enlace de breadcrumb válido?) then (sí)
+    :Navegar a la página seleccionada;
+    :Actualizar los breadcrumbs para reflejar la nueva ubicación;
+  else (no)
+    :Mostrar mensaje de error;
+  endif
+repeat while (El usuario sigue interactuando con los breadcrumbs)
+
+stop
+@enduml

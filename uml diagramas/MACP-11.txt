@@ -1,0 +1,15 @@
+@startuml
+start
+:Inicio;
+:Recuperar comentarios de clientes desde la base de datos;
+repeat
+  :Mostrar comentario;
+  if (¿Hay más comentarios para mostrar?) then (sí)
+    ->Repetir;
+  else (no)
+    ->Finalizar;
+  endif
+repeat while (¿Hay más comentarios para mostrar?) is (sí) not (no)
+:Comentarios mostrados exitosamente;
+stop
+@enduml

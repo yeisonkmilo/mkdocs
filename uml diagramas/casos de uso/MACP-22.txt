@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor Usuario as u
+
+package "Zoom en Imágenes de Productos" {
+  usecase "Ver Imagen del Producto" as UC1
+  usecase "Ampliar/Reducir Imagen" as UC2
+  usecase "Mover Imagen" as UC3
+  usecase "Restablecer Zoom" as UC4
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC4
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor Usuario as u
+
+package "Sitio Web" {
+  usecase "Ver Página Actual" as UC1
+  usecase "Navegar a Página Anterior" as UC2
+  usecase "Navegar a Página Principal" as UC3
+  usecase "Navegar a Página de Inicio" as UC4
+}
+
+u --> UC1 : "Visita página"
+u --> UC2 : "Retrocede a página anterior"
+u --> UC3 : "Navega a página principal"
+u --> UC4 : "Navega a página de inicio"
+
+@enduml

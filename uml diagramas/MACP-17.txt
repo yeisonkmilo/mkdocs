@@ -1,0 +1,21 @@
+@startuml
+start
+:Identificar elementos clave del sitio web;
+:Verificar etiquetas ARIA y roles semánticos;
+:Testear navegación con lector de pantalla;
+repeat
+  :Realizar prueba con lector de pantalla;
+    if (Lector de pantalla no lee correctamente?) then (yes)
+      :Actualizar atributos ARIA y roles semánticos;
+      :Revisar contraste de color y tamaño de fuente;
+      :Ajustar navegación por teclado;
+      ->Re-test;
+    else (no)
+      #palegreen:Accesibilidad OK;
+      break
+    endif
+repeat while (Accesibilidad OK?) is (no) not (yes)
+:Documentar resultados de prueba;
+:Implementar mejoras necesarias;
+stop
+@enduml

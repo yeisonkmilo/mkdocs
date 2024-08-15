@@ -1,0 +1,26 @@
+@startuml
+start
+
+:Ingresar dirección de correo electrónico;
+:Enviar solicitud de registro;
+
+:Guardar información del usuario en base de datos;
+:Generar código de verificación y enviar al correo electrónico;
+
+repeat
+  :Esperar verificación de correo electrónico;
+  :Usuario hace clic en enlace de verificación;
+  :Verificar código de verificación;
+
+  if (Código de verificación es válido?) then (sí)
+    :Marcar usuario como verificado;
+    :Mostrar mensaje "Registro exitoso";
+    stop
+  else (no)
+    :Mostrar mensaje "Código de verificación inválido";
+    :Reenviar código de verificación;
+  endif
+
+repeat while (Código de verificación inválido?) is (sí) not (no)
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+start
+
+:Iniciar sesión;
+:Seleccionar opción "Editar perfil";
+
+repeat
+  :Mostrar formulario de edición;
+  :Actualizar información del perfil;
+  if (Datos válidos?) then (yes)
+    :Guardar cambios;
+    :Mostrar mensaje "Perfil actualizado con éxito";
+    break
+  else (no)
+    :Mostrar mensaje "Error en la actualización";
+    :Reintentar edición;
+  endif
+repeat while (Datos válidos?) is (no) not (yes)
+
+:Finalizar sesión o regresar al perfil;
+stop
+
+@enduml

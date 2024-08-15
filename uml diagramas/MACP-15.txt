@@ -1,0 +1,21 @@
+@startuml
+start
+:Iniciar sesión o abrir la aplicación;
+repeat
+  :Navegar por el menú principal;
+  :Seleccionar categoría de información;
+  :Explorar opciones disponibles;
+  if (¿Información encontrada?) then (sí)
+    :Visualizar información;
+    :Realizar acción deseada;
+    #palegreen:Operación completada;
+    break
+  else (no)
+    :Mostrar mensaje "Información no encontrada";
+    :Volver al menú principal;
+    #lightcoral:Error;
+  endif
+repeat while (¿Hay más información que buscar?) is (sí) not (no)
+:Cerrar sesión o salir de la aplicación;
+stop
+@enduml

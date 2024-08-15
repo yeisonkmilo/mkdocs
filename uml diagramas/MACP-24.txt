@@ -1,0 +1,20 @@
+@startuml
+start
+
+:Mostrar pantalla de inicio;
+:Usuario selecciona categoría;
+:Validar categoría seleccionada;
+
+if (Categoría válida?) then (sí)
+  :Filtrar productos por categoría;
+  :Mostrar lista de productos filtrados;
+  :Usuario selecciona un producto;
+  :Mostrar detalles del producto;
+else (no)
+  :Mostrar mensaje de error "Categoría no válida";
+endif
+
+:Usuario regresa a la pantalla de inicio;
+
+stop
+@enduml

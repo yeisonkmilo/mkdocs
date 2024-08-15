@@ -1,0 +1,22 @@
+@startuml
+start
+
+:Acceder al perfil de usuario;
+:Verificar autenticación del cliente;
+
+if (Cliente autenticado?) then (sí)
+  :Cargar perfil de usuario;
+  :Mostrar historial de compras;
+
+  if (Historial disponible?) then (sí)
+    :Visualizar historial de compras;
+  else (no)
+    :Mostrar mensaje "Historial de compras no disponible";
+  endif
+
+else (no)
+  :Mostrar mensaje "Acceso denegado. Inicie sesión.";
+endif
+
+stop
+@enduml

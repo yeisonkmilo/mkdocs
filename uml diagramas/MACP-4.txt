@@ -1,0 +1,26 @@
+@startuml
+start
+:Usuario accede al sitio web;
+:Verificar si el dispositivo es móvil;
+if (¿El dispositivo es móvil?) then (sí)
+  :Mostrar menú móvil;
+  :Verificar tamaño de pantalla;
+  if (¿El tamaño de la pantalla es pequeño?) then (sí)
+    :Adaptar diseño del menú para pantallas pequeñas;
+  else (no)
+    :Adaptar diseño del menú para pantallas grandes;
+  endif
+else (no)
+  :Mostrar menú de escritorio;
+endif
+:Usuario interactúa con el menú;
+:Verificar si la interacción con el menú es correcta;
+if (¿La interacción es correcta?) then (sí)
+  :Menú es responsivo y funcional;
+else (no)
+  :Ajustar diseño del menú;
+  :Probar interacción del menú nuevamente;
+endif
+:Usuario continúa navegación;
+stop
+@enduml

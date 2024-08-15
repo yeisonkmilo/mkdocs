@@ -1,0 +1,22 @@
+@startuml
+start
+
+:Usuario selecciona "Acceder a cuenta" desde el menú;
+
+:Mostrar formulario de inicio de sesión;
+
+:Usuario ingresa credenciales;
+
+:Verificar credenciales;
+
+if (Credenciales válidas?) then (sí)
+  :Acceder a la cuenta;
+  :Redirigir a la página de inicio;
+  :Mostrar mensaje de bienvenida;
+else (no)
+  :Mostrar mensaje de error;
+  :Solicitar reingreso de credenciales;
+endif
+
+stop
+@enduml

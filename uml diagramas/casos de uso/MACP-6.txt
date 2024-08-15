@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+actor "Usuario Registrado" as UR
+
+package "Menú Principal" {
+  usecase "Acceder a Cuenta" as UC1
+  usecase "Ver Información Personal" as UC2
+  usecase "Actualizar Datos" as UC3
+  usecase "Acceder a Historial de Pedidos" as UC4
+  usecase "Realizar Otras Gestiones" as UC5
+}
+
+UR --> UC1
+UC1 --> UC2
+UC1 --> UC3
+UC1 --> UC4
+UC1 --> UC5
+
+@enduml

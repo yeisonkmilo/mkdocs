@@ -1,0 +1,39 @@
+@startuml
+start
+:Iniciar aplicación o sitio web;
+:Identificar problema o duda;
+if (Problema o duda identificada?) then (sí)
+  :Buscar sección de ayuda y soporte;
+  :Elegir tipo de soporte (FAQ, chat en vivo, correo electrónico, etc.);
+  if (FAQ?) then (sí)
+    :Buscar respuesta en FAQ;
+    if (Respuesta encontrada?) then (sí)
+      :Leer respuesta;
+      :Problema resuelto;
+    else (no)
+      :Regresar a opciones de soporte;
+    endif
+  else (no)
+    if (Chat en vivo?) then (sí)
+      :Iniciar chat con soporte en vivo;
+      :Describir problema o duda;
+      :Esperar respuesta del soporte;
+      :Leer solución o instrucciones;
+      :Problema resuelto;
+    else (no)
+      if (Correo electrónico?) then (sí)
+        :Enviar correo con descripción del problema o duda;
+        :Esperar respuesta por correo;
+        :Leer solución o instrucciones;
+        :Problema resuelto;
+      else (no)
+        :Opciones de soporte no disponibles;
+        :Buscar alternativa;
+      endif
+    endif
+  endif
+else (no)
+  :No hay problema o duda;
+endif
+stop
+@enduml

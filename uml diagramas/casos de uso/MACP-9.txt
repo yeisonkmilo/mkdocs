@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor Usuario as u
+
+package "Sitio Web" {
+  usecase "Ver enlaces a redes sociales" as UC1
+  usecase "Seguir en redes sociales" as UC2
+}
+
+u --> UC1
+u --> UC2
+@enduml

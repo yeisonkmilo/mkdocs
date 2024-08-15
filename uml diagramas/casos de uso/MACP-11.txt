@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+
+actor Invitado as i
+actor Cliente as c
+
+package SitioWeb {
+  usecase "Ver Comentarios de Clientes" as UC1
+}
+
+i --> UC1
+c --> UC1
+
+@enduml

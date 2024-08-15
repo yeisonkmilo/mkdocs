@@ -1,4 +1,4 @@
-site_name: Mi documentación Online
+site_name: MACAPP
 site_url: https://darwinyusef.github.io/materialmkdocs/
 site_author: Yusef Gonzalez | Aquicreamos
 site_description: >-
@@ -120,4 +120,35 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Análisis de Software:
-      - TAL-4 Diagrama de canvas lean: tal-4.md
+      - MACP-2 Menú principal: macp-2.md
+      - MACP-3 Submenu desplegable: macp-3.md
+      - MACP-4 Menú responsivo: macp-4.md
+      - MACP-5 acceso rapido: macp-5.md
+      - MACP-6 Diseñar enlace carrito compras: macp-6.md
+      - MACP-7 slider promocionales: macp-7.md
+      - MACP-8 seecion productos destacados: macp-8.md
+      - MACP-9 Enlace redes sociales: macp-9.md
+      - MACP-10 Barra de busqueda: macp-10.md
+      - MACP-11 Comentarios de clientes: macp-11.md
+      - MACP-13 Implementar diseño Responsivo: macp-13.md
+      - MACP-14 Carga rapida de pagina: macp-14.md
+      - MACP-15 Navegación Intuitiva: macp-15.md
+      - MACP-16 Ayuda y Soporte Accesible: macp-16.md 
+      - MACP-17 Accesibilidad Discapacidades: macp-17.md    
+      - MACP-18 Personalización de Interfaz : macp-18.md
+      - MACP-19 Breadcrumbs para navegación: macp-19.md
+      - MACP-20 Alertas y Notificaciones: macp-20.md
+      - MACP-21 Feedback Visual: macp-21.md
+      - MACP-22 Zoom en Imagenes: macp-22.md
+      - MACP-24 Filtrado de productos: macp-24.md
+      - MACP-25 Menús Desplegables: macp-25.md
+      - MACP-26 Pagina de detalles de producto: macp-26.md
+      - MACP-27 Comentarios y valoracón: macp-27.md
+      - MACP-28 Notificaciones de Stock: macp-28.md
+      - MACP-30 Registro de usuarios: macp-30.md
+      - MACP-31 Recuperación de contraseñas: macp-31.md
+      - MACP-32 Crear Perfil de usuario: macp-32.md
+      - MACP-33 Editar datos de perfil: macp-33.md
+      - MACP-34 cerrar sesión segura: macp-34.md
+
+

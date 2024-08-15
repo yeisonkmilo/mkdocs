@@ -1,0 +1,21 @@
+@startuml
+start
+:Inicio del proceso de monitoreo;
+
+repeat
+  :Verificar eventos importantes;
+  if (¿Hay eventos importantes?) then (sí)
+    :Generar alerta y notificación;
+    if (¿Alerta exitosa?) then (sí)
+      #palegreen:OK;
+    else (no)
+      #lightcoral:Error;
+    endif
+  else (no)
+    #palegreen:Sin eventos importantes;
+  endif
+repeat while (¿Desea continuar monitoreando?) is (sí) not (no)
+
+:Finalizar monitoreo;
+stop
+@enduml

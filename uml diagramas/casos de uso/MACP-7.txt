@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+
+actor "Usuario" as u
+
+package "Página de Inicio" {
+  usecase "Ver Slider de Imágenes Promocionales" as UC1
+}
+
+u --> UC1
+
+@enduml

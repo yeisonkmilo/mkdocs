@@ -1,0 +1,24 @@
+@startuml
+start
+
+:Definir requerimientos de diseño responsivo;
+:Seleccionar herramientas y tecnologías (CSS, frameworks, etc.);
+
+:Implementar diseño básico;
+repeat
+  :Crear versiones para diferentes dispositivos (móvil, tableta, escritorio);
+  :Verificar diseño en diferentes resoluciones y tamaños de pantalla;
+  if (Diseño se adapta correctamente?) then (sí)
+    #palegreen:OK;
+    break
+  else
+    :Ajustar CSS y layout;
+  endif
+repeat while (Diseño se adapta correctamente?) is (no) not (sí)
+
+:Realizar pruebas adicionales (usabilidad, rendimiento, etc.);
+:Implementar ajustes finales;
+
+:Desplegar el sitio web responsivo;
+stop
+@enduml

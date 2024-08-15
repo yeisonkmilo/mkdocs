@@ -1,0 +1,31 @@
+@startuml
+start
+
+:Mostrar menú principal;
+:Usuario registrado selecciona "Cuenta de usuario";
+
+repeat
+  :Mostrar opciones de cuenta (Ver información, Actualizar datos, Historial de pedidos, etc.);
+  :Usuario selecciona una opción;
+  
+  if (Opción seleccionada?) then (Ver información personal)
+    :Mostrar información personal;
+  else if (Opción seleccionada?) then (Actualizar datos)
+    :Mostrar formulario de actualización de datos;
+    :Actualizar datos;
+    :Confirmar actualización;
+  else if (Opción seleccionada?) then (Historial de pedidos)
+    :Mostrar historial de pedidos;
+  else
+    :Mostrar otras gestiones;
+  endif
+  
+  :¿Desea realizar otra acción?;
+repeat while (Sí)
+
+:Usuario selecciona "Cerrar sesión";
+:Confirmar cierre de sesión;
+:Regresar al menú principal;
+
+stop
+@enduml

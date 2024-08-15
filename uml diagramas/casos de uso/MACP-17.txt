@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor "Usuario con Discapacidad Visual" as u
+
+package "Sitio Web" {
+  usecase "Navegar utilizando lector de pantalla" as UC1
+  usecase "Acceder a toda la información" as UC2
+  usecase "Utilizar funcionalidades completas" as UC3
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+
+@enduml

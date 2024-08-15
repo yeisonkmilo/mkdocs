@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+actor "Usuario" as user
+
+package "Sistema de Productos" {
+  usecase "Filtrar productos por categoría" as UC1
+  usecase "Mostrar lista de productos" as UC2
+  usecase "Seleccionar producto" as UC3
+  usecase "Ver detalles del producto" as UC4
+}
+
+user --> UC1
+UC1 --> UC2
+UC2 --> UC3
+UC3 --> UC4
+
+@enduml

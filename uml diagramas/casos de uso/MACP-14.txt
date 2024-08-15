@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+actor Usuario as u
+
+package "Sistema de Carga Rápida" {
+  usecase "Optimizar Carga de Recursos" as UC1
+  usecase "Reducir Tiempos de Respuesta" as UC2
+  usecase "Minificar Archivos" as UC3
+  usecase "Implementar Caché" as UC4
+  usecase "Optimizar Imágenes" as UC5
+  usecase "Cargar Contenido Asíncrono" as UC6
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC4
+u --> UC5
+u --> UC6
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor User as u
+
+package "Sistema de Feedback Visual" {
+  usecase "Interacción con Elemento" as UC1
+  usecase "Confirmación Visual" as UC2
+  usecase "Mostrar Estado Actual" as UC3
+  usecase "Actualizar Estado" as UC4
+}
+
+u --> UC1
+UC1 --> UC2 : "Genera Feedback Visual"
+UC1 --> UC3 : "Actualiza Estado"
+UC2 --> UC4 : "Actualiza Estado del Sistema"
+UC3 --> UC4 : "Actualiza Estado en Interfaz"
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor "Usuario" as U
+
+package "Menú Principal" {
+  usecase "Ver Opciones del Menú" as UC1
+  usecase "Abrir Submenú" as UC2
+  usecase "Seleccionar Opción en Submenú" as UC3
+}
+
+U --> UC1
+UC1 --> UC2 : Contiene
+UC2 --> UC3 : Permite
+
+@enduml

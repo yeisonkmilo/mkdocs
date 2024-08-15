@@ -1,0 +1,37 @@
+@startuml
+start
+
+:Acceder a la configuración de la interfaz de usuario;
+
+repeat
+  :Seleccionar opción de personalización;
+  :Elegir tipo de personalización;
+  if (¿Modificar tamaño del texto?) then (sí)
+    :Ajustar tamaño del texto;
+    :Confirmar ajuste del texto;
+  else (no)
+    if (¿Cambiar color de fondo?) then (sí)
+      :Seleccionar nuevo color de fondo;
+      :Aplicar color de fondo;
+    else (no)
+      if (¿Modificar disposición de elementos?) then (sí)
+        :Reorganizar elementos en la interfaz;
+        :Guardar nueva disposición;
+      endif
+    endif
+  endif
+  
+  :Previsualizar cambios;
+  :¿Cambios correctos?;
+  if (Sí) then (sí)
+    :Guardar cambios;
+    :Confirmar personalización exitosa;
+    break
+  else (no)
+    :Reiniciar personalización;
+  endif
+
+repeat while (¿Desea realizar más ajustes?) is (sí) not (no)
+
+stop
+@enduml

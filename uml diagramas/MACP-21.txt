@@ -1,0 +1,16 @@
+@startuml
+start
+repeat
+  :Usuario realiza una acción;
+  :Sistema procesa la acción;
+  if (Acción procesada correctamente?) then (sí)
+    #palegreen:Mostrar confirmación visual (ej. mensaje de éxito);
+    :Actualizar estado de la aplicación o sitio web;
+  else (no)
+    #lightcoral:Mostrar mensaje de error (ej. alerta o mensaje de error);
+    :Actualizar estado de la aplicación o sitio web;
+  endif
+repeat while (El usuario realiza más acciones?) is (sí) not (no)
+:Mostrar mensaje de despedida o cierre (opcional);
+stop
+@enduml

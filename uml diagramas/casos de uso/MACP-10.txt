@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor Usuario as u
+
+package "Sitio Web" {
+  usecase "Buscar contenido o producto" as UC1
+}
+
+u --> UC1
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+start
+
+:Acceder a cualquier página del sitio web;
+:Verificar visibilidad del menú principal;
+if (¿El menú principal es visible?) then (sí)
+  :Interactuar con el menú principal;
+  :Seleccionar una opción del menú;
+  :Navegar a la sección correspondiente;
+else (no)
+  :Notificar error de visibilidad del menú;
+  :Esperar resolución del problema;
+endif
+
+repeat
+  :Acceder a otra página del sitio web;
+  :Verificar visibilidad del menú principal;
+  if (¿El menú principal es visible?) then (sí)
+    :Interactuar con el menú principal;
+    :Seleccionar una opción del menú;
+    :Navegar a la sección correspondiente;
+  else (no)
+    :Notificar error de visibilidad del menú;
+    :Esperar resolución del problema;
+  endif
+repeat while (Desea continuar navegando?) is (sí) not (no)
+
+stop
+@enduml

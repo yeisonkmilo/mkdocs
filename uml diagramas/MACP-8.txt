@@ -1,0 +1,34 @@
+@startuml
+start
+
+:Identificar requisitos de la sección de productos destacados;
+
+:Crear boceto o diseño inicial de la sección;
+
+:Obtener retroalimentación del equipo de diseño y stakeholders;
+
+repeat
+  :Revisar diseño con retroalimentación;
+  :Actualizar diseño;
+  if (Diseño aprobado?) then (no)
+    :Solicitar más retroalimentación;
+  else (yes)
+    #palegreen:Diseño aprobado;
+    break
+  endif
+repeat while (Diseño aprobado?) is (no) not (yes)
+
+:Implementar sección en el sitio web;
+
+:Realizar pruebas de funcionalidad y diseño;
+
+if (Pruebas exitosas?) then (yes)
+  #palegreen:Sección funcional;
+  :Lanzar la sección en el sitio web;
+else (no)
+  :Corregir errores;
+  :Volver a realizar pruebas;
+endif
+
+stop
+@enduml

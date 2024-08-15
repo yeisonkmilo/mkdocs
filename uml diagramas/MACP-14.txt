@@ -1,0 +1,28 @@
+@startuml
+start
+
+:Analizar el Tiempo de Carga Actual;
+:Identificar Cuellos de Botella;
+repeat
+  :Optimizar la Carga de Recursos;
+  :Minimizar Solicitudes HTTP;
+  :Habilitar Caché;
+  :Optimizar Imágenes y Recursos;
+  :Minificar CSS y JavaScript;
+  :Implementar Carga Diferida;
+  :Revisar el Rendimiento del Servidor;
+  if (¿Tiempo de Carga Aceptable?) then (sí)
+    #palegreen:OK;
+    break
+  else (no)
+    #lightcoral:No OK;
+    :Reevaluar Estrategias de Optimización;
+  endif
+repeat while (¿Tiempo de Carga Aceptable?) is (no) not (sí)
+
+:Desplegar Cambios en Producción;
+:Monitorear el Rendimiento;
+:Recopilar Retroalimentación de Usuarios;
+
+stop
+@enduml

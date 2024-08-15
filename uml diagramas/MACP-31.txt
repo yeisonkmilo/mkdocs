@@ -1,0 +1,26 @@
+@startuml
+start
+:Usuario solicita recuperación de contraseña;
+:Mostrar formulario de recuperación;
+:Usuario ingresa correo electrónico;
+:Verificar existencia del correo en el sistema;
+if (Correo existe?) then (sí)
+  :Generar enlace de recuperación;
+  :Enviar correo con enlace de recuperación;
+  :Mostrar mensaje de éxito al usuario;
+else (no)
+  :Mostrar mensaje de error al usuario;
+endif
+:Usuario recibe correo con enlace de recuperación;
+:Usuario hace clic en el enlace de recuperación;
+:Mostrar formulario para establecer nueva contraseña;
+:Usuario ingresa nueva contraseña y confirma;
+:Verificar validez de la nueva contraseña;
+if (Contraseña válida?) then (sí)
+  :Actualizar contraseña en el sistema;
+  :Mostrar mensaje de éxito al usuario;
+else (no)
+  :Mostrar mensaje de error al usuario;
+endif
+stop
+@enduml

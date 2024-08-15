@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+
+actor "Cliente" as cliente
+
+package "Sistema de Compras" {
+  usecase "Acceder al perfil de usuario" as UC1
+  usecase "Visualizar historial de compras" as UC2
+}
+
+cliente --> UC1
+UC1 --> UC2
+
+@enduml

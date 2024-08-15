@@ -1,0 +1,16 @@
+@startuml
+start
+:Definir los requisitos de la barra de búsqueda;
+:Diseñar la interfaz de usuario (UI) para la barra de búsqueda;
+:Implementar la funcionalidad de búsqueda;
+:Realizar pruebas de funcionalidad;
+if (¿Las pruebas son exitosas?) then (sí)
+  :Desplegar la barra de búsqueda en la página de inicio;
+else (no)
+  :Revisar y corregir errores;
+  :Repetir pruebas de funcionalidad;
+endif
+:Actualizar la documentación;
+:Monitorear y mantener la barra de búsqueda;
+stop
+@enduml

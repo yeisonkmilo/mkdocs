@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor Usuario as u
+
+package "Sistema de Recuperación de Contraseña" {
+  usecase "Solicitar recuperación de contraseña" as UC1
+  usecase "Recibir enlace de recuperación por correo" as UC2
+  usecase "Restablecer contraseña" as UC3
+}
+
+u --> UC1
+UC1 --> UC2
+UC2 --> UC3
+
+@enduml
