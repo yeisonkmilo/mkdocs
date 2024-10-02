@@ -1,0 +1,15 @@
+@startuml
+start
+:Acceder al CMS;
+:Configurar generación automática del sitemap.xml;
+repeat
+  :Generar sitemap.xml;
+  :Actualizar sitemap.xml;
+  if (¿Cambios significativos en el sitio?) then (sí)
+    :Notificar a motores de búsqueda;
+  else (no)
+    :Esperar próximo ciclo de actualización;
+  endif
+repeat while (Cambios significativos en el sitio?) is (sí) not (no)
+stop
+@enduml

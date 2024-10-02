@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor Usuario as u
+
+package Sistema {
+  usecase "Interactuar con Chatbot" as UC1
+  usecase "Resolver Problemas Técnicos" as UC2
+  usecase "Obtener Información sobre Productos" as UC3
+  usecase "Escalar Consulta a Agente Humano" as UC4
+}
+
+u --> UC1
+UC1 --> UC2
+UC1 --> UC3
+UC2 --> UC4
+UC3 --> UC4
+
+@enduml

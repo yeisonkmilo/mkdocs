@@ -41,7 +41,6 @@ Si un pepito perez desea ver nuestro catálogo de productos, verá que  cada pro
             <li>El sistema muestra la página de detalles del producto.</li>
              <li>La página presenta: Una imagen principal del producto, Nombre del producto, Descripción completa del producto, Especificaciones o características del producto, Precio, Información de disponibilidad (en stock o fuera de stock), Opciones para seleccionar cantidad o variaciones, Botón para agregar al carrito, Opciones para compartir el producto en redes sociales o enviar por correo electrónico.</li>
              <li>El usuario revisa la información y decide si desea agregar el producto al carrito o continuar explorando.</li>
-
     </td>
   </tr>
   <tr class="single gray">

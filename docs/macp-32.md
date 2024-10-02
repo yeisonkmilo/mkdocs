@@ -50,7 +50,6 @@ Continuando con el ejemplo de pepito perez el podra : tener acceso al formulario
   <tr class="single text">
     <td>
         <ol>
-                  <li>
                   <li>Autenticación y Acceso: El cliente debe poder iniciar sesión con sus credenciales válidas. El cliente debe poder acceder a su perfil de usuario después de iniciar sesión.</li>
                   <li>Visualización del Historial de Compras: El perfil del usuario debe tener una sección visible y accesible para el historial de compras. La lista de historial de compras debe mostrar la fecha de cada compra, los productos adquiridos, las cantidades y los precios. El cliente debe poder seleccionar una compra específica para ver detalles adicionales.</li>
                   <li>Manejo de Datos Vacíos: Si el cliente no tiene compras en el historial, el sistema debe mostrar un mensaje informativo adecuado indicando que no hay datos disponibles.</li>

@@ -50,16 +50,15 @@ Tenemos la responsabilidad de que La página debe verse bien en cualquier dispos
   <tr class="single text">
     <td>
         <ol>
-               <li>
                   <li>Envío en Tiempo Real: La notificación debe ser enviada y recibida por el usuario en tiempo real o con una latencia mínima, acorde a las necesidades del evento. </li>
-•  <li>Canales de Notificación: La notificación debe enviarse a través de los canales seleccionados por el usuario (por ejemplo, correo electrónico, mensaje de texto, notificación push).</li>
-•  <li>Formato de Notificación: La notificación debe ser clara y proporcionar suficiente información sobre el evento para que el usuario pueda comprender rápidamente la situación y actuar en consecuencia.</li>
-•  <li>Configuración de Preferencias: El sistema debe permitir a los usuarios configurar y actualizar sus preferencias de notificación (por ejemplo, tipos de eventos, frecuencia, canales de comunicación).</li>
-•  <li>Confirmación de Recepción: Si el canal de notificación lo permite, el sistema debe proporcionar una confirmación de recepción de la notificación (por ejemplo, un acuse de recibo para notificaciones push o un informe de entrega para correos electrónicos).</li>
-•  <li>Registro de Intentos Fallidos: El sistema debe registrar los intentos fallidos de envío de notificaciones para su posterior análisis y resolución de problemas.</li>
-•  <li>Accesibilidad: Las notificaciones deben ser accesibles en diferentes dispositivos y plataformas según las configuraciones del usuario (por ejemplo, móviles, tabletas, computadoras de escritorio).</li>
-•  <li>Seguridad: Las notificaciones deben cumplir con los estándares de seguridad y privacidad para proteger la información del usuario y garantizar que solo el usuario destinatario reciba la notificación.</li>
-•  <li>Pruebas y Validación: Se deben realizar pruebas exhaustivas para garantizar que las notificaciones se envíen y reciban correctamente en todos los escenarios previstos.</li>
+<li>Canales de Notificación: La notificación debe enviarse a través de los canales seleccionados por el usuario (por ejemplo, correo electrónico, mensaje de texto, notificación push).</li>
+<li>Formato de Notificación: La notificación debe ser clara y proporcionar suficiente información sobre el evento para que el usuario pueda comprender rápidamente la situación y actuar en consecuencia.</li>
+<li>Configuración de Preferencias: El sistema debe permitir a los usuarios configurar y actualizar sus preferencias de notificación (por ejemplo, tipos de eventos, frecuencia, canales de comunicación).</li>
+<li>Confirmación de Recepción: Si el canal de notificación lo permite, el sistema debe proporcionar una confirmación de recepción de la notificación (por ejemplo, un acuse de recibo para notificaciones push o un informe de entrega para correos electrónicos).</li>
+<li>Registro de Intentos Fallidos: El sistema debe registrar los intentos fallidos de envío de notificaciones para su posterior análisis y resolución de problemas.</li>
+<li>Accesibilidad: Las notificaciones deben ser accesibles en diferentes dispositivos y plataformas según las configuraciones del usuario (por ejemplo, móviles, tabletas, computadoras de escritorio).</li>
+<li>Seguridad: Las notificaciones deben cumplir con los estándares de seguridad y privacidad para proteger la información del usuario y garantizar que solo el usuario destinatario reciba la notificación.</li>
+<li>Pruebas y Validación: Se deben realizar pruebas exhaustivas para garantizar que las notificaciones se envíen y reciban correctamente en todos los escenarios previstos.</li>
  <tr class="duo">
     <th class="gray"><strong>Calidad</strong></th>
     <th>En desarrollo</th>
@@ -76,6 +75,6 @@ Tenemos la responsabilidad de que La página debe verse bien en cualquier dispos
 ## Diagrama de Caso de uso
 [Creado con plantuml](https://plantuml.com/es/)
 
-![Image title](./assets/images/DIAGRAMAS%20DE%20CASO%20DE%20USO/CASO20.png){ align=center }
+![Image title](./assets/images/DIAGRAMAS%20DE%20CASO%20DE%20USO/CASO20.png){align=center}
 
 El diagrama de casos de uso muestra cómo un usuario interactúa con el sistema de alertas y notificaciones en tiempo real. Incluye casos de uso para recibir, configurar y visualizar el historial de alertas y notificaciones. Esto permite al usuario estar informado y gestionar sus preferencias de manera efectiva.

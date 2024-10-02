@@ -1,0 +1,16 @@
+@startuml
+start
+:Usuario se registra o inicia sesión;
+:Usuario configura sus preferencias e intereses;
+:Sistema analiza el historial de usuario;
+repeat
+  :Sistema genera notificaciones personalizadas;
+  if (Notificación relevante?) then (sí)
+    :Sistema envía notificación;
+  else (no)
+    :Omitir notificación;
+  endif
+repeat while (Nuevas notificaciones disponibles?) is (sí)
+:Usuario recibe y revisa notificación;
+stop
+@enduml

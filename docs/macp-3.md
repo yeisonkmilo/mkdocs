@@ -58,7 +58,6 @@ El usuario que quiere comprar muebles puede entrar a un menú principal o una p�
               <li>Responsividad:El diseño del submenú debe adaptarse adecuadamente a diferentes tamaños de pantalla y resoluciones.</li>
               <li>Interacción:  El submenú debe colapsarse cuando se hace clic en una opción dentro del submenú o cuando el usuario mueve el cursor fuera del área del menú (si aplica).</li>
               <li>Errores y Mensajes: En caso de errores de despliegue, debe haber una solución de respaldo o un mensaje claro que informe al usuario sobre el problema.</li>
-
         </ol>
     </td>
   </tr>

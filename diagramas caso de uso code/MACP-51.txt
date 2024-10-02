@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor "Responsable de Marketing y SEO" as mseo
+package "Gestión de Redirecciones" {
+  usecase "Identificar páginas eliminadas" as UC1
+  usecase "Configurar redirecciones 301" as UC2
+  usecase "Verificar redirecciones" as UC3
+  usecase "Notificar a motores de búsqueda" as UC4
+}
+mseo --> UC1
+mseo --> UC2
+mseo --> UC3
+mseo --> UC4
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+start
+repeat
+  :Identificar todas las imágenes en el sitio web;
+    if (¿La imagen tiene alt text descriptivo?) then (sí)
+      #palegreen:OK;
+    else (no)
+      :Agregar alt text relevante;
+    endif
+    :Comprimir imagen manteniendo calidad adecuada;
+    if (¿Compresión exitosa?) then (sí)
+      #palegreen:OK;
+    else (no)
+      :Generar alerta "Error al comprimir imagen";
+    endif
+repeat while (Más imágenes por optimizar?) is (sí) not (no)
+:Actualizar sitio web con imágenes optimizadas;
+:Generar informe de optimización;
+stop
+@enduml

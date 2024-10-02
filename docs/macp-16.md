@@ -38,7 +38,6 @@ Tenemos la responsabilidad de que La página debe verse bien en cualquier dispos
   <tr class="single text">
     <td>
         <ol>
-            <li>
              <li> Acceso al soporte: El usuario busca una opción de ayuda o soporte dentro del sitio web o la aplicación.</li>
              <li>Visualización de opciones: El usuario encuentra y selecciona una opción de ayuda, como un botón, enlace o ícono accesible.</li>
             <li>Interacción con el soporte: El usuario accede a las diferentes opciones de soporte ofrecidas, que pueden incluir: FAQ (Preguntas frecuentes): Acceso a una lista de preguntas comunes y sus respuestas. Chat en vivo: Interacción con un agente de soporte en tiempo real. Formulario de contacto: Envío de una consulta o solicitud de soporte a través de un formulario. Número de teléfono: Información para contactar soporte por teléfono.</li>

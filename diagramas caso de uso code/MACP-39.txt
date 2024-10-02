@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor Usuario as u
+package "Opciones de Pago" {
+  usecase "Seleccionar Método de Pago" as UC1
+  usecase "Ingresar Información de Pago" as UC2
+  usecase "Confirmar Pago" as UC3
+  usecase "Mostrar Opciones de Pago" as UC4
+}
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC4
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+actor Responsable de Marketing y SEO as marketing
+
+package Gestión de Contenido {
+  usecase Investigar Palabras Clave as UC1
+  usecase Crear Contenido de Calidad as UC2
+  usecase Optimizar Contenido para SEO as UC3
+  usecase Publicar Artículo en el Blog as UC4
+  usecase Monitorear Rendimiento as UC5
+  usecase Ajustar Contenido as UC6
+}
+
+marketing -- UC1
+marketing -- UC2
+marketing -- UC3
+marketing -- UC4
+marketing -- UC5
+marketing -- UC6
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+start
+:Usuario ingresa información de pago;
+repeat
+  :Validar información de pago;
+    if (¿Información correcta?) then (no)
+      ->NOK;
+      :Mostrar mensaje de error;
+    else (sí)
+      #palegreen:Información validada;
+      break
+    endif
+repeat while (¿Corrección necesaria?) is (sí) not (no)
+->//Guardar información//;
+:Guardar información de pago;
+:Confirmar guardado exitoso;
+stop
+@enduml

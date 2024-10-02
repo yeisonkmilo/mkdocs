@@ -1,0 +1,23 @@
+@startuml
+start
+repeat
+  :El usuario accede al chatbot;
+  :El usuario ingresa una consulta o problema;
+  :El chatbot procesa la consulta (NLP);
+  if (¿Respuesta encontrada?) then (sí)
+    :El chatbot presenta la respuesta al usuario;
+    if (¿Usuario satisfecho?) then (sí)
+      #palegreen:Usuario cierra la conversación;
+      break
+    else (no)
+      :Chatbot ofrece opciones adicionales o transfiere a un agente;
+    endif
+  else (no)
+    :Chatbot transfiere al usuario a un agente humano;
+    :Agente humano resuelve la consulta;
+  endif
+repeat while (¿Hay más consultas?) is (sí) not (no)
+->//merged step//;
+:Fin de la interacción;
+stop
+@enduml

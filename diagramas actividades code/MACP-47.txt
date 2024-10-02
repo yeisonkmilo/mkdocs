@@ -1,0 +1,18 @@
+@startuml
+start
+:Acceder al CMS;
+:Seleccionar página a editar;
+repeat
+  :Ingresar título de página;
+    if (¿Título es único y descriptivo?) then (sí)
+      #palegreen:Guardar título;
+      break
+    else (no)
+      :Mostrar mensaje de error;
+      ->NOK;
+    endif
+repeat while (¿Corregir título?) is (sí) not (no)
+:Actualizar página con el nuevo título;
+:Reflejar cambios en los motores de búsqueda;
+stop
+@enduml

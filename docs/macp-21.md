@@ -50,7 +50,6 @@ Tenemos la responsabilidad de que La página debe verse bien en cualquier dispos
   <tr class="single text">
     <td>
         <ol>
-               <li>
                   <li>Feedback de Éxito: Tras una acción exitosa, el sistema debe mostrar un feedback visual que indique claramente que la acción se completó con éxito por ejemplo, un mensaje de confirmación verde o una animación de éxito.</li>
                   <li>Feedback de Error: En caso de error, el sistema debe proporcionar un feedback visual que explique el problema y sugiera acciones para resolverlo por ejemplo, un mensaje de error rojo con detalles sobre lo que salió mal.</li>
                   <li>Feedback de Progreso: Mientras se está procesando una acción que toma tiempo, el sistema debe mostrar un feedback visual de carga que informe al usuario que la acción está en curso por ejemplo, un spinner o una barra de progreso.</li>
