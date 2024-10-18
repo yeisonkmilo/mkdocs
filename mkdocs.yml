@@ -120,6 +120,7 @@ markdown_extensions:
 nav:
   - INICIO: index.md
   - CREAR PAGINAS DE INICIO:
+      - MACP-1 Diagrama de er: macp-1.md
       - MACP-2 Menú principal: macp-2.md
       - MACP-3 Submenu desplegable: macp-3.md
       - MACP-4 Menú responsivo: macp-4.md
