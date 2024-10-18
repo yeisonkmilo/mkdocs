@@ -1,13 +1,13 @@
 site_name: MACAPP
-site_url: https://darwinyusef.github.io/materialmkdocs/
+site_url: https://github.com/yeisonkmilo/mkdocs.git
 site_author: MACAPP | Aquicreamos
 site_description: >-
   Este es un proyecto que gestiona la documentación de mi proyecto – 
   contiene los datos de usuario y contenidos
 
 # Repository
-repo_name: darwinyusef/materialmkdocs
-repo_url: https://github.com/darwinyusef/materialmkdocs
+repo_name: yeisonkmilo/mkdocs
+repo_url: https://github.com/yeisonkmilo/mkdocs.git
 
 # Copyright
 copyright: Copyright &copy; 2024 - 2030 MACAPP | MACAPP
@@ -28,8 +28,8 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep purple
-      accent: deep purple
+      primary: black
+      accent: black
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
@@ -118,8 +118,8 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Home: index.md
-  - Análisis de Software:
+  - INICIO: index.md
+  - CREAR PAGINAS DE INICIO:
       - MACP-2 Menú principal: macp-2.md
       - MACP-3 Submenu desplegable: macp-3.md
       - MACP-4 Menú responsivo: macp-4.md
@@ -130,6 +130,7 @@ nav:
       - MACP-9 Enlace redes sociales: macp-9.md
       - MACP-10 Barra de busqueda: macp-10.md
       - MACP-11 Comentarios de clientes: macp-11.md
+  - INTERFAZ Y EXPERIENCIA DEL USUARIO:
       - MACP-13 Implementar diseño Responsivo: macp-13.md
       - MACP-14 Carga rapida de pagina: macp-14.md
       - MACP-15 Navegación Intuitiva: macp-15.md
@@ -141,15 +142,18 @@ nav:
       - MACP-21 Feedback Visual: macp-21.md
       - MACP-22 Zoom en Imagenes: macp-22.md
       - MACP-24 Filtrado de productos: macp-24.md
+  - CATALOGO DE PRODUCTO:
       - MACP-25 Menús Desplegables: macp-25.md
       - MACP-26 Pagina de detalles de producto: macp-26.md
       - MACP-27 Comentarios y valoracón: macp-27.md
       - MACP-28 Notificaciones de Stock: macp-28.md
+  - GESTIÓN DE USUARIO:    
       - MACP-30 Registro de usuarios: macp-30.md
       - MACP-31 Recuperación de contraseñas: macp-31.md
       - MACP-32 Crear Perfil de usuario: macp-32.md
       - MACP-33 Editar datos de perfil: macp-33.md
       - MACP-34 cerrar sesión segura: macp-34.md
+  - PROCESO DE COMPRA:    
       - MACP-36 crear proceso de checkout en pasos claramente definidos: macp-36.md 
       - MACP-37 implementar autocompletado de dirección con API de geolocalización: macp-37.md 
       - MACP-38 implementar revisión de pedido antes de la compra final: macp-38.md 
@@ -160,6 +164,7 @@ nav:
       - MACP-43 implementar opción de envío express o estándar: macp-43.md
       - MACP-44 implementar cupones y códigos de descuento: macp-44.md
       - MACP-45 crear confirmación de pedido por correo electrónico: macp-45.md
+  - MARKETING Y SEO:     
       - MACP-47 crear títulos de página SEO-amigables: macp-47.md
       - MACP-48 implementar descripciones claras: macp-48.md
       - MACP-49 crear urls amigables para SEO: macp-49.md
@@ -170,6 +175,7 @@ nav:
       - MACP-54 implementar contenido de calidad en blogs: macp-54.md
       - MACP-55 implementar backlinks de calidad: macp-55.md
       - MACP-56 implementar análisis de palabras claves: macp-56.md
+  - INTELIGENCIA ARTIFICIAL:    
       - MACP-58 crear recomendación personalizada de productos: macp-58.md
       - MACP-59 diseñar búsqueda avanzada de productos: macp-59.md
       - MACP-60 crear visualización de productos en realidad aumentada: macp-60.md
@@ -182,6 +188,7 @@ nav:
       - MACP-67 implementar retroalimentación y mejora continua del sistema de ia: macp-67.md
       - MACP-68 implementar integración con redes sociales para análisis de tendencias: macp-68.md
       - MACP-69 implementar aprendizaje automático para detectar preferencias implícitas : macp-69.md
+  - SEGURIDAD FRONTEND BACKEND:    
       - MACP-71 Diseñar refuerzo de la autenticación de usuario: macp-71.md
       - MACP-72 Implementar encriptación de datos sensibles: macp-72.md
       - MACP-73 Implementar auditoría de acceso: macp-73.md
@@ -190,6 +197,7 @@ nav:
       - MACP-76 Diseñar pruebas de penetración continuas: macp-76.md
       - MACP-77 implementar educación y concientización sobre seguridad: macp-77.md
       - MACP-78 Implementar criterio de aceptación: macp-78.md
+  - ADMINISTRACIÓN DEL SITIO:    
       - MACP-80 implementar panel de administración fácil de usar: macp-80.md
       - MACP-81 Crear gestión de inventarios: macp-81.md
       - MACP-82 Crear gestión de usuarios y roles: macp-82.md
@@ -198,6 +206,7 @@ nav:
       - MACP-85 crear reportes y análisis de ventas: macp-85.md
       - MACP-86 diseñar integración con sistemas de pago: macp-86.md
       - MACP-87 crear seguridad robusta: macp-87.md
+  - DISEÑO CARRITO DE COMPRAS:    
       - MACP-89 diseñar ilustración de carrito: macp-89.md
       - MACP-90 diseñar la opción agregar productos al carrito: macp-90.md
       - MACP-91 diseñar eliminar productos del carrito: macp-91.md
