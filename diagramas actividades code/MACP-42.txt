@@ -1,0 +1,19 @@
+@startuml
+start
+:Cliente realiza una compra;
+:Recopilar datos de la compra;
+repeat
+  :Generar factura automática;
+    if (¿Generación correcta?) then (no)
+      ->NOK;
+      :Mostrar mensaje de error;
+    else (sí)
+      #palegreen:Factura generada correctamente;
+      break
+    endif
+repeat while (¿Corrección necesaria?) is (sí) not (no)
+->//entrega de factura//;
+:Enviar factura al correo del cliente;
+:Guardar factura en la cuenta del cliente;
+stop
+@enduml

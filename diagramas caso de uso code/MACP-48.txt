@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor "Responsable de Marketing y SEO" as seo
+package "Sitio Web" {
+  usecase "Acceder al CMS" as UC1
+  usecase "Seleccionar Página" as UC2
+  usecase "Ingresar Meta Descripción" as UC3
+  usecase "Guardar Cambios" as UC4
+  usecase "Actualizar Sitio Web" as UC5
+}
+seo --> UC1
+seo --> UC2
+seo --> UC3
+UC3 --> UC4
+UC4 --> UC5
+@enduml

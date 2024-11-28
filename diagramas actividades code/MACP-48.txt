@@ -1,0 +1,14 @@
+@startuml
+start
+:Acceder al CMS;
+:Seleccionar una página para editar;
+:Ingresar meta descripción clara y relevante;
+if (Descripción correcta?) then (sí)
+  #palegreen:Guardar cambios;
+  :Actualizar sitio web;
+else (no)
+  ->NOK;
+  :Revisar y corregir descripción;
+endif
+stop
+@enduml

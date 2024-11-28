@@ -1,0 +1,16 @@
+@startuml
+start
+:Usuario inicia sesión;
+:Obtener historial de compras, búsquedas y preferencias;
+repeat
+  :Analizar datos de usuario;
+  if (Datos insuficientes?) then (sí)
+    :Generar recomendaciones generales;
+    break
+  endif
+    :Generar recomendaciones personalizadas;
+repeat while (Nuevos datos disponibles?) is (sí) not (no)
+:Mostrar recomendaciones en la página principal;
+:Usuario revisa y selecciona productos;
+stop
+@enduml

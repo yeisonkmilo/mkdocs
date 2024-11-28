@@ -1,0 +1,40 @@
+@startuml
+start
+repeat
+  :Iniciar Checkout;
+  
+  :Mostrar Paso 1 - Información de Envío;
+  :Introducir Información de Envío;
+  if (Información de Envío Válida?) then (Sí)
+    #palegreen:OK;
+  else (No)
+    :Mostrar Mensaje de Error;
+  endif
+repeat while (Información de Envío No Válida?) is (Sí) not (No)
+
+:Mostrar Paso 2 - Opciones de Envío;
+:Seleccionar Opción de Envío;
+
+repeat
+  :Mostrar Paso 3 - Información de Pago;
+  :Introducir Información de Pago;
+  if (Información de Pago Válida?) then (Sí)
+    #palegreen:OK;
+  else (No)
+    :Mostrar Mensaje de Error;
+  endif
+repeat while (Información de Pago No Válida?) is (Sí) not (No)
+
+:Mostrar Paso 4 - Revisión del Pedido;
+:Revisar Detalles del Pedido;
+if (Pedido Confirmado?) then (Sí)
+  :Confirmar Pedido;
+  #palegreen:OK;
+else (No)
+  :Regresar y Modificar Datos;
+endif
+
+:Procesar Pedido;
+:Mostrar Confirmación de Pedido;
+stop
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor Usuario as u
+
+package "Plataforma de Comercio Electrónico" {
+  usecase "Buscar productos con filtros avanzados" as UC1
+  usecase "Aplicar filtros de búsqueda" as UC2
+  usecase "Ver resultados de búsqueda" as UC3
+  usecase "Utilizar IA para recomendaciones" as UC4
+}
+
+u --> UC1
+UC1 --> UC2
+UC1 --> UC3
+UC1 --> UC4
+@enduml

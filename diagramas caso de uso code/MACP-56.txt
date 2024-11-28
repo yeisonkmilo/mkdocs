@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor "Especialista en marketing digital" as emd
+package "Herramientas de Marketing" {
+  usecase "Realizar análisis de palabras clave" as UC1
+  usecase "Optimizar productos y contenidos" as UC2
+  usecase "Monitorear visibilidad y tráfico" as UC3
+}
+emd --> UC1
+emd --> UC2
+emd --> UC3
+@enduml

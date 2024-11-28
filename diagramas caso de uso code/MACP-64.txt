@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor "Diseñador de UX" as UX
+package "Optimización de la UI basada en IA" {
+  usecase "Analizar comportamiento de usuarios" as UC1
+  usecase "Identificar áreas de mejora" as UC2
+  usecase "Realizar cambios iterativos en el diseño" as UC3
+  usecase "Evaluar efectividad de cambios" as UC4
+}
+
+UX --> UC1
+UX --> UC2
+UX --> UC3
+UX --> UC4
+@enduml

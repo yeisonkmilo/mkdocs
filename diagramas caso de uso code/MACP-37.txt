@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor Usuario as u
+package "Autocompletado de Dirección" {
+  usecase "Iniciar Entrada de Dirección" as UC1
+  usecase "Llamar a API de Geolocalización" as UC2
+  usecase "Mostrar Sugerencias de Dirección" as UC3
+  usecase "Seleccionar Dirección Sugerida" as UC4
+  usecase "Autocompletar Dirección" as UC5
+  usecase "Validar Dirección Completa" as UC6
+}
+u --> UC1
+UC1 --> UC2
+UC2 --> UC3
+u --> UC4
+UC4 --> UC5
+UC5 --> UC6
+@enduml

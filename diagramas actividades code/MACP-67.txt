@@ -1,0 +1,30 @@
+@startuml
+start
+
+:Implementar sistema de retroalimentación;
+:Recopilar comentarios de usuarios;
+
+repeat
+  :Analizar comentarios;
+  if (Identificar áreas de mejora?) then (sí)
+    :Revisar áreas de mejora;
+    :Priorizar mejoras;
+    :Ajustar modelos de IA;
+    :Actualizar sistema;
+    :Implementar mejoras;
+  else
+    :Ninguna área de mejora identificada;
+  endif
+repeat while (Comentarios nuevos disponibles?) is (sí) not (no)
+
+:Monitorear desempeño del sistema;
+:Recopilar nuevos comentarios;
+
+if (Satisfacción del usuario mejorada?) then (sí)
+  :Proceso de mejora continua establecido;
+else
+  :Ajustar proceso de retroalimentación;
+endif
+
+stop
+@enduml

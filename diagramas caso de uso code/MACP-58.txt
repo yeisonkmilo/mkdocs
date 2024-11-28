@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor "Usuario Registrado" as u
+package "Sistema de Recomendaciones" {
+  usecase "Analizar Historial de Compras" as UC1
+  usecase "Analizar Historial de Búsquedas" as UC2
+  usecase "Analizar Preferencias" as UC3
+  usecase "Generar Recomendaciones Personalizadas" as UC4
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+UC1 --> UC4
+UC2 --> UC4
+UC3 --> UC4
+@enduml

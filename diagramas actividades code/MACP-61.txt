@@ -1,0 +1,25 @@
+@startuml
+start
+:El gerente de producto inicia sesión;
+:El sistema autentica al gerente;
+:El gerente selecciona "Análisis de Sentimientos";
+:El sistema solicita plataformas y período;
+:El gerente selecciona plataformas y período;
+:El sistema recopila reseñas;
+:El sistema aplica análisis de sentimientos;
+repeat
+  :Clasificación de reseñas;
+    if (¿Más reseñas por analizar?) then (sí)
+      :Clasificar siguiente reseña;
+    else (no)
+      stop
+    endif
+repeat while (¿Más reseñas por analizar?) is (sí) not (no)
+:El sistema genera el informe;
+:El gerente recibe notificación;
+:El gerente revisa el informe;
+:El gerente analiza los resultados;
+:El gerente identifica áreas de mejora;
+:El gerente toma decisiones estratégicas;
+stop
+@enduml

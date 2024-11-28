@@ -1,0 +1,19 @@
+@startuml
+start
+:Cliente procede al checkout;
+:Mostrar opciones de envío: Express y Estándar;
+repeat
+  :Cliente selecciona una opción de envío;
+    if (¿Selección válida?) then (sí)
+      #palegreen:Opción seleccionada;
+      :Calcular costo de envío;
+      :Actualizar total del pedido;
+      break
+    else (no)
+      :Mostrar mensaje de error;
+      ->NOK;
+    endif
+repeat while (¿Corrección necesaria?) is (sí) not (no)
+:Confirmar selección y finalizar compra;
+stop
+@enduml

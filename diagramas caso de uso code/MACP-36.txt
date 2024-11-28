@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor Cliente as c
+package "Proceso de Checkout" {
+  usecase "Introducir Información de Envío" as UC1
+  usecase "Seleccionar Opción de Envío" as UC2
+  usecase "Introducir Información de Pago" as UC3
+  usecase "Revisar y Confirmar Pedido" as UC4
+  usecase "Procesar Pedido" as UC5
+  usecase "Mostrar Confirmación de Pedido" as UC6
+}
+c --> UC1
+c --> UC2
+c --> UC3
+c --> UC4
+UC4 --> UC5
+UC5 --> UC6
+@enduml
