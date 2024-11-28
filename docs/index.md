@@ -1,4 +1,4 @@
-# Gestión Documental proyecto Macapp
+# Gestión Documental Pyotecto SynCroPro
 
 ![Book Documental](./assets/images/book.jpeg)
 ## Entra y descarga el link 
