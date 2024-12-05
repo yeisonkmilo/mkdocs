@@ -1,0 +1,41 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoFinanzas {
+    + idFinanzas: int
+    + generarResumenMensual(mes: int, año: int): ResumenMensual
+}
+
+class ResumenMensual {
+    + mes: int
+    + año: int
+    + totalIngresos: double
+    + totalEgresos: double
+    + balance: double
+    + detalleTransacciones: List<Transaccion>
+    + calcularTotales(): void
+}
+
+class Transaccion {
+    + idTransaccion: int
+    + tipo: String <<enum>> ("Ingreso" | "Egreso")
+    + monto: double
+    + descripcion: String
+    + fecha: Date
+}
+
+class RegistroFinanciero {
+    + transacciones: List<Transaccion>
+    + obtenerTransaccionesPorMes(mes: int, año: int): List<Transaccion>
+}
+
+Usuario <|-- EncargadoFinanzas
+EncargadoFinanzas --> ResumenMensual : "Genera"
+ResumenMensual --> Transaccion : "Incluye detalle"
+RegistroFinanciero --> Transaccion : "Contiene"
+EncargadoFinanzas --> RegistroFinanciero : "Consulta"

@@ -1,0 +1,34 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoFinanzas {
+    + idFinanzas: int
+    + modificarTransaccion(idTransaccion: int, nuevaTransaccion: Transaccion): void
+}
+
+class RegistroFinanciero {
+    + idRegistro: int
+    + transacciones: List<Transaccion>
+    + obtenerTransaccion(idTransaccion: int): Transaccion
+    + actualizarTransaccion(transaccion: Transaccion): void
+}
+
+class Transaccion {
+    + idTransaccion: int
+    + tipo: String <<enum>> ("Ingreso" | "Egreso")
+    + monto: double
+    + descripcion: String
+    + fecha: Date
+    + validarDatos(): boolean
+}
+
+Usuario <|-- EncargadoFinanzas
+EncargadoFinanzas --> RegistroFinanciero : "Modifica"
+RegistroFinanciero --> Transaccion : "Contiene"
+
+@enduml

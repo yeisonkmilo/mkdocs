@@ -1,0 +1,40 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class AnalistaDatos {
+    + idAnalista: int
+    + generarReportePersonalizado(filtros: Map): Reporte
+}
+
+class Reporte {
+    + idReporte: int
+    + nombre: String
+    + fechaCreacion: Date
+    + datos: List<Data>
+    + generarResumen(): String
+}
+
+class Data {
+    + idData: int
+    + tipo: String
+    + valor: double
+}
+
+class Filtro {
+    + campo: String
+    + operador: String
+    + valor: String
+}
+
+AnalistaDatos --> Reporte : "Genera"
+Reporte --> Data : "Contiene"
+Reporte --> Filtro : "Usa"
+AnalistaDatos --> Filtro : "Aplica filtros"
+AnalistaDatos --> Usuario : "Accede"
+
+@enduml

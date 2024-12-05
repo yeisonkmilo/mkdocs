@@ -1,0 +1,41 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoLogistica {
+    + idLogistica: int
+    + planificarRuta(puntos: List<PuntoEntrega>): Ruta
+}
+
+class Ruta {
+    + idRuta: int
+    + distanciaTotal: double
+    + tiempoEstimado: double
+    + puntosEntrega: List<PuntoEntrega>
+    + calcularDistancia(): double
+    + calcularTiempoEstimado(): double
+}
+
+class PuntoEntrega {
+    + idPunto: int
+    + direccion: String
+    + cliente: String
+    + tiempoEntrega: double
+}
+
+class SistemaGeolocalizacion {
+    + calcularDistanciaEntrePuntos(origen: PuntoEntrega, destino: PuntoEntrega): double
+    + calcularTiempoEstimado(origen: PuntoEntrega, destino: PuntoEntrega): double
+}
+
+Usuario <|-- EncargadoLogistica
+EncargadoLogistica --> Ruta : "Crea"
+Ruta --> PuntoEntrega : "Incluye"
+Ruta --> SistemaGeolocalizacion : "Consulta"
+SistemaGeolocalizacion --> PuntoEntrega : "Calcula detalles"
+
+@enduml

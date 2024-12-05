@@ -1,18 +1,11 @@
-# GESTION DE PRODUCCIÓN
+# GESTIÓN DE PRODUCCIÓN
 
 ------
 
-## Diagrama de Actividades
-[Creado con plantuml](https://plantuml.com/es/)
-
-![Image title](./assets/images/macp-17.png){ align=center }
-
-Este diagrama de actividad muestra el proceso de asegurar la accesibilidad web para usuarios con discapacidad visual. Incluye la identificación de elementos clave, la verificación y ajuste de etiquetas ARIA, pruebas con lectores de pantalla, ajustes en contraste y navegación por teclado, y la documentación de resultados para mejoras continuas.
----
-###
-
 ## Caso de uso historia 
 Carlos, encargado de producción, necesita monitorear el progreso de las órdenes en curso. Accede al sistema de gestión de producción y visualiza una vista general del avance de cada orden. El sistema muestra el estado actualizado de cada etapa de producción, incluyendo los plazos establecidos y el progreso alcanzado. Si alguna orden presenta retrasos, Carlos puede identificarla rápidamente y tomar las medidas correctivas necesarias para asegurar que se cumplan los plazos.
+
+---
 
   <tr class="idtext principal">
     <td>ID SYN-25</td>
@@ -69,12 +62,11 @@ Carlos, encargado de producción, necesita monitorear el progreso de las órdene
 </table>
 
 
-
 ---
 ## Diagrama de Caso de uso
 [Creado con plantuml](https://plantuml.com/es/)
 
-![Image title](./assets/images/DIAGRAMAS%20DE%20CASO%20DE%20USO/CASO17.png){ align=center }
+![Image title](./assets/images/syn-27.png)
 
-Este diagrama de casos de uso muestra cómo un "Usuario con Discapacidad Visual" interactúa con un sitio web accesible. Incluye la capacidad de navegar usando un lector de pantalla, acceder a toda la información del sitio y utilizar todas las funcionalidades disponibles, garantizando una experiencia inclusiva y completa.
- 
+---
+

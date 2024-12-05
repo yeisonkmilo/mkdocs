@@ -1,0 +1,35 @@
+@startuml
+
+class AdministradorSistema {
+    + idAdministrador: int
+    + nombre: String
+    + enviarReporteAutomatico(reporte: Reporte, listaUsuarios: List<Usuario>, frecuencia: String): void
+}
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + correoElectronico: String
+}
+
+class Reporte {
+    + idReporte: int
+    + nombre: String
+    + fechaCreacion: Date
+    + generarContenido(): String
+}
+
+class CorreoElectronico {
+    + idCorreo: int
+    + destinatarios: List<String>
+    + asunto: String
+    + cuerpo: String
+    + enviar(): void
+}
+
+AdministradorSistema --> Reporte : "Genera y envía"
+AdministradorSistema --> Usuario : "Envía a"
+Reporte --> CorreoElectronico : "Se incluye en"
+CorreoElectronico --> Usuario : "Recibe correo"
+
+@enduml

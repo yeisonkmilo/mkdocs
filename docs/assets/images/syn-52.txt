@@ -1,0 +1,43 @@
+@startuml
+
+class AnalistaDatos {
+    + idAnalista: int
+    + configurarPlantilla(template: Plantilla): void
+    + generarReporteRecurrente(): Reporte
+}
+
+class Plantilla {
+    + idPlantilla: int
+    + nombre: String
+    + frecuencia: String
+    + filtros: List<Filtro>
+    + formato: String
+}
+
+class Reporte {
+    + idReporte: int
+    + nombre: String
+    + fechaCreacion: Date
+    + datos: List<Data>
+    + generarResumen(): String
+}
+
+class Filtro {
+    + campo: String
+    + operador: String
+    + valor: String
+}
+
+class Data {
+    + idData: int
+    + tipo: String
+    + valor: double
+}
+
+AnalistaDatos --> Plantilla : "Configura"
+AnalistaDatos --> Reporte : "Genera"
+Plantilla --> Filtro : "Usa"
+Reporte --> Data : "Contiene"
+AnalistaDatos --> Usuario : "Accede"
+
+@enduml

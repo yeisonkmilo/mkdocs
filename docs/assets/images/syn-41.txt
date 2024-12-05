@@ -1,0 +1,46 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoFinanzas {
+    + idFinanzas: int
+    + crearPresupuesto(nombre: String, montoTotal: double, tipo: String, asociadoA: String): Presupuesto
+    + ajustarPresupuesto(presupuesto: Presupuesto, nuevoMonto: double): void
+}
+
+class Presupuesto {
+    + idPresupuesto: int
+    + nombre: String
+    + montoTotal: double
+    + montoGastado: double
+    + tipo: String <<enum>> ("Proyecto" | "Departamento")
+    + asociadoA: String
+    + calcularBalance(): double
+}
+
+class Gasto {
+    + idGasto: int
+    + descripcion: String
+    + monto: double
+    + fecha: Date
+}
+
+class RegistroPresupuestal {
+    + idRegistro: int
+    + presupuestos: List<Presupuesto>
+    + agregarPresupuesto(presupuesto: Presupuesto): void
+    + obtenerPresupuestos(tipo: String): List<Presupuesto>
+    + obtenerGastos(idPresupuesto: int): List<Gasto>
+}
+
+EncargadoFinanzas --> Presupuesto : "Crea y gestiona"
+Presupuesto --> Gasto : "Registra"
+RegistroPresupuestal --> Presupuesto : "Almacena"
+Presupuesto --> RegistroPresupuestal : "Consulta para resumen"
+Usuario <|-- EncargadoFinanzas
+
+@enduml

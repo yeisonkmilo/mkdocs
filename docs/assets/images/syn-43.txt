@@ -1,0 +1,46 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoFinanzas {
+    + idFinanzas: int
+    + visualizarEstadisticas(periodoInicio: Date, periodoFin: Date): EstadisticasFinancieras
+}
+
+class EstadisticasFinancieras {
+    + idEstadisticas: int
+    + periodoInicio: Date
+    + periodoFin: Date
+    + totalIngresos: double
+    + totalEgresos: double
+    + balance: double
+    + ingresosPorMes: Map<String, double>
+    + egresosPorMes: Map<String, double>
+    + generarGraficoBarras(): void
+    + generarGraficoTorta(): void
+}
+
+class RegistroFinanciero {
+    + idRegistro: int
+    + transacciones: List<Transaccion>
+    + calcularEstadisticas(periodoInicio: Date, periodoFin: Date): EstadisticasFinancieras
+}
+
+class Transaccion {
+    + idTransaccion: int
+    + tipo: String <<enum>> ("Ingreso" | "Egreso")
+    + monto: double
+    + descripcion: String
+    + fecha: Date
+}
+
+Usuario <|-- EncargadoFinanzas
+EncargadoFinanzas --> EstadisticasFinancieras : "Visualiza"
+EstadisticasFinancieras --> RegistroFinanciero : "Consulta datos"
+RegistroFinanciero --> Transaccion : "Contiene"
+
+@enduml

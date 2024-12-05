@@ -1,0 +1,41 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class SupervisorDiseno {
+    + idSupervisor: int
+    + proyectosSupervisados: List<Proyecto>
+    + extenderFechaLimite(version: VersionDiseno, nuevaFecha: Date): void
+}
+
+class Proyecto {
+    + idProyecto: int
+    + nombre: String
+    + descripcion: String
+    + versiones: List<VersionDiseno>
+    + obtenerVersion(idVersion: int): VersionDiseno
+}
+
+class VersionDiseno {
+    + idVersion: int
+    + numeroVersion: String
+    + descripcion: String
+    + fechaLimite: Date
+    + actualizarFechaLimite(nuevaFecha: Date): void
+    + notificarExtension(): void
+}
+
+class SistemaNotificaciones {
+    + enviarNotificacion(usuarios: List<Usuario>, mensaje: String): void
+}
+
+Usuario <|-- SupervisorDiseno
+Proyecto --> VersionDiseno : "Contiene"
+SupervisorDiseno --> Proyecto : "Supervisa"
+VersionDiseno --> SistemaNotificaciones : "Solicita notificación"
+
+@enduml

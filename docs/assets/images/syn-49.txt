@@ -1,0 +1,36 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoLogistica {
+    + idLogistica: int
+    + marcarEntregaComoCompletada(idPunto: int): void
+}
+
+class Ruta {
+    + idRuta: int
+    + distanciaTotal: double
+    + tiempoEstimado: double
+    + puntosEntrega: List<PuntoEntrega>
+    + verificarProgreso(): double
+}
+
+class PuntoEntrega {
+    + idPunto: int
+    + direccion: String
+    + cliente: String
+    + estado: String <<enum>> ("Pendiente", "Completada")
+    + marcarCompletada(): void
+}
+
+Usuario <|-- EncargadoLogistica
+EncargadoLogistica --> PuntoEntrega : "Marca como Completada"
+Ruta --> PuntoEntrega : "Incluye"
+Ruta --> EncargadoLogistica : "Consulta"
+PuntoEntrega --> Ruta : "Actualiza progreso"
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoFinanzas {
+    + idFinanzas: int
+    + consultarReporte(periodoInicio: Date, periodoFin: Date, proyecto: String): ReporteFinanciero
+}
+
+class ReporteFinanciero {
+    + idReporte: int
+    + periodoInicio: Date
+    + periodoFin: Date
+    + proyecto: String
+    + ingresos: double
+    + egresos: double
+    + balance: double
+    + generarReporte(): String
+}
+
+class Transaccion {
+    + idTransaccion: int
+    + tipo: String <<enum>> ("Ingreso" | "Egreso")
+    + monto: double
+    + descripcion: String
+    + fecha: Date
+    + proyectoAsociado: String
+}
+
+class RegistroFinanciero {
+    + idRegistro: int
+    + transacciones: List<Transaccion>
+    + agregarTransaccion(transaccion: Transaccion): void
+    + obtenerTransacciones(periodoInicio: Date, periodoFin: Date, proyecto: String): List<Transaccion>
+}
+
+Usuario <|-- EncargadoFinanzas
+EncargadoFinanzas --> ReporteFinanciero : "Consulta"
+ReporteFinanciero --> RegistroFinanciero : "Consulta transacciones"
+RegistroFinanciero --> Transaccion : "Contiene"
+
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoLogistica {
+    + idLogistica: int
+    + recibirAlertaRetraso(idEntrega: int): void
+}
+
+class Ruta {
+    + idRuta: int
+    + distanciaTotal: double
+    + tiempoEstimado: double
+    + tiempoReal: double
+    + puntosEntrega: List<PuntoEntrega>
+    + verificarRetraso(): boolean
+}
+
+class PuntoEntrega {
+    + idPunto: int
+    + direccion: String
+    + cliente: String
+    + tiempoEstimado: double
+    + tiempoReal: double
+    + estado: String <<enum>> ("Pendiente", "Completada", "Retrasada")
+    + verificarRetraso(): boolean
+}
+
+class SistemaNotificaciones {
+    + enviarAlerta(usuario: Usuario, mensaje: String): void
+}
+
+Usuario <|-- EncargadoLogistica
+EncargadoLogistica --> Ruta : "Consulta"
+EncargadoLogistica --> SistemaNotificaciones : "Recibe alerta"
+Ruta --> PuntoEntrega : "Incluye"
+Ruta --> SistemaNotificaciones : "Verifica retrasos"
+PuntoEntrega --> SistemaNotificaciones : "Verifica retrasos"
+
+@enduml

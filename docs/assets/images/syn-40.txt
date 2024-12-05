@@ -1,0 +1,34 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoFinanzas {
+    + idFinanzas: int
+    + registrarTransaccion(tipo: String, monto: double, descripcion: String, fecha: Date): Transaccion
+}
+
+class Transaccion {
+    + idTransaccion: int
+    + tipo: String  <<enum>> ("Ingreso" | "Egreso")
+    + monto: double
+    + descripcion: String
+    + fecha: Date
+    + generarRegistro(): String
+}
+
+class RegistroFinanciero {
+    + idRegistro: int
+    + transacciones: List<Transaccion>
+    + agregarTransaccion(transaccion: Transaccion): void
+    + obtenerResumen(fechaInicio: Date, fechaFin: Date): List<Transaccion>
+}
+
+Usuario <|-- EncargadoFinanzas
+EncargadoFinanzas --> Transaccion : "Registra"
+RegistroFinanciero --> Transaccion : "Agrega"
+
+@enduml

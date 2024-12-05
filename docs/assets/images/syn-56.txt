@@ -1,0 +1,40 @@
+@startuml
+class Agente {
+    + id: int
+    + nombre: string
+    + correo: string
+    + asignarTicket(ticket: Ticket): void
+    + cambiarEstado(ticket: Ticket, estado: string): void
+}
+
+class Cliente {
+    + id: int
+    + nombre: string
+    + correo: string
+    + recibirNotificacion(mensaje: string): void
+}
+
+class Ticket {
+    + id: int
+    + descripcion: string
+    + fechaCreacion: Date
+    + estado: string
+    + prioridad: string
+    + idAgenteAsignado: int
+    + actualizarEstado(estado: string): void
+    + registrarHistorial(historial: Historial): void
+}
+
+class Historial {
+    + id: int
+    + idTicket: int
+    + fechaCambio: Date
+    + estadoPrevio: string
+    + estadoActual: string
+    + idAgente: int
+}
+
+Agente "1" --> "0..*" Ticket : asigna
+Cliente "1" --> "0..*" Ticket : reporta
+Ticket "1" --> "0..*" Historial : registra
+@enduml

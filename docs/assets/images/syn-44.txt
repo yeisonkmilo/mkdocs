@@ -1,0 +1,42 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoFinanzas {
+    + idFinanzas: int
+    + recibirNotificacion(mensaje: String): void
+}
+
+class Presupuesto {
+    + idPresupuesto: int
+    + nombre: String
+    + limite: double
+    + montoActual: double
+    + verificarLimite(): boolean
+}
+
+class Notificacion {
+    + idNotificacion: int
+    + mensaje: String
+    + fechaEnvio: Date
+    + enviar(destinatario: Usuario): void
+}
+
+class SistemaFinanciero {
+    + presupuestos: List<Presupuesto>
+    + monitorearPresupuestos(): void
+    + generarNotificacion(presupuesto: Presupuesto): Notificacion
+}
+
+Usuario <|-- EncargadoFinanzas
+EncargadoFinanzas --> Notificacion : "Recibe"
+Presupuesto --> SistemaFinanciero : "Es monitoreado"
+SistemaFinanciero --> Notificacion : "Genera"
+Notificacion --> Usuario : "Envia a"
+Presupuesto --> EncargadoFinanzas : "Notifica al alcanzar límite"
+
+@enduml

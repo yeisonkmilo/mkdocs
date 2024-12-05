@@ -1,0 +1,42 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + rol: String
+}
+
+class EncargadoFinanzas {
+    + idFinanzas: int
+    + exportarReporte(tipoFormato: Formato, reporte: Reporte): Archivo
+}
+
+class Reporte {
+    + idReporte: int
+    + nombre: String
+    + datos: String
+    + generarDatos(): void
+}
+
+class Formato <<enumeration>> {
+    PDF
+    Excel
+    CSV
+}
+
+class Exportador {
+    + exportar(reporte: Reporte, formato: Formato): Archivo
+}
+
+class Archivo {
+    + nombreArchivo: String
+    + formato: Formato
+    + contenido: byte[]
+    + guardarRuta(ruta: String): void
+}
+
+Usuario <|-- EncargadoFinanzas
+EncargadoFinanzas --> Exportador : "Utiliza"
+Exportador --> Reporte : "Convierte a formato"
+Exportador --> Archivo : "Genera"
+Reporte --> Archivo : "Genera contenido"

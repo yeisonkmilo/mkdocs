@@ -1,0 +1,29 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + correoElectronico: String
+    + crearTicket(descripcion: String, prioridad: String): Ticket
+}
+
+class Ticket {
+    + idTicket: int
+    + descripcion: String
+    + prioridad: String
+    + fechaCreacion: Date
+    + estado: String
+    + asignarTicket(soporte: Soporte): void
+}
+
+class Soporte {
+    + idSoporte: int
+    + nombre: String
+    + responderTicket(ticket: Ticket, respuesta: String): void
+}
+
+Usuario --> Ticket : "Crea"
+Ticket --> Soporte : "Asignado a"
+Ticket --> Usuario : "Enviado por"
+
+@enduml

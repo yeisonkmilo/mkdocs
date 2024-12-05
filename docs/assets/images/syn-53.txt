@@ -1,0 +1,34 @@
+@startuml
+
+class Usuario {
+    + idUsuario: int
+    + nombre: String
+    + exportarReporte(reporte: Reporte, formato: String): void
+}
+
+class Reporte {
+    + idReporte: int
+    + nombre: String
+    + fechaCreacion: Date
+    + datos: List<Data>
+    + generarResumen(): String
+}
+
+class Data {
+    + idData: int
+    + tipo: String
+    + valor: double
+}
+
+class Formato {
+    + tipo: String
+    + extension: String
+    + exportar(datos: List<Data>): String
+}
+
+Usuario --> Reporte : "Solicita"
+Usuario --> Formato : "Elige"
+Reporte --> Data : "Contiene"
+Formato --> Reporte : "Genera"
+
+@enduml
